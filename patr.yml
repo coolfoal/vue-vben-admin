@@ -4,12 +4,12 @@ name: Default
 services: []
 steps:
   - name: Install Dependencies
-    image: patrcloud/cli:latest
+    image: node:latest
     commands:
       - npm install
     next: Build Code
   - name: Build Code
-    image: patrcloud/cli:latest
+    image: node:latest
     commands:
       - npm run build
     next: Publish on Patr
